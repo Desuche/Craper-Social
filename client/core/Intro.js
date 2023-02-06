@@ -8,6 +8,7 @@ const IntroScene = () => {
 
     return(
         <Box>
+            
         <div>
         <Avatar />
         </div>
