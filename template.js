@@ -7,7 +7,7 @@ export default ({markup, css}) => {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           >
-          <title>MERN Social</title>
+          <title>Craper</title>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
           <style>
@@ -16,7 +16,7 @@ export default ({markup, css}) => {
               }
           </style>
         </head>
-        <body style="margin:0">
+        <body>
           <div id="root">${markup}</div>
           <style id="jss-server-side">${css}</style>
           <script type="text/javascript" src="/dist/bundle.js"></script>

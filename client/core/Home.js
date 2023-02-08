@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     margin: 30,
   },
   card: {
-    maxWidth: 600,
+    maxWidth: 1000,
     margin: 'auto',
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5)
@@ -36,16 +36,6 @@ const useStyles = makeStyles(theme => ({
     '& a':{
       color: '#3f4771'
     } 
-  },
-  center:{
-    // display:"flex",
-    // justifyContent:"center",
-    // alignItems:"center",
-    // minHeight:"100vh"
-    position: 'absolute', 
-        left: '50%', 
-        top: '50%',
-        transform: 'translate(-50%, -50%)'
   }
 }))
 
@@ -73,10 +63,12 @@ export default function Home({history}){
                   Home Page
                 </Typography>
                 <CardMedia className={classes.media} image={unicornbikeImg} title="Unicorn Bicycle"/>
-                <Typography variant="body2" component="p" className={classes.credit} color="textSecondary">Photo by <a href="https://unsplash.com/@boudewijn_huysmans" target="_blank" rel="noopener noreferrer">Boudewijn Huysmans</a> on Unsplash</Typography>
                 <CardContent>
                   <Typography type="body1" component="p">
-                    Welcome to the MERN Social home page. 
+                    Welcome to Craper Social. 
+                  </Typography>
+                  <Typography type="body2" component="p" color="textSecondary">
+                    Sign in to continue
                   </Typography>
                 </CardContent>
               </Card>
@@ -85,10 +77,10 @@ export default function Home({history}){
         }
         {defaultPage &&
           <Grid container spacing={8}>
-            <Grid item xs={8} sm={7}>
+            <Grid item xs sm={7}>
               <Newsfeed/>
             </Grid>
-            <Grid item xs={6} sm={5}>
+            <Grid item xs={3} sm={5}>
               <FindPeople/>
             </Grid>
           </Grid>

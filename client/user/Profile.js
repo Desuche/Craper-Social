@@ -21,7 +21,8 @@ import {listByUser} from './../post/api-post.js'
 
 const useStyles = makeStyles(theme => ({
   root: theme.mixins.gutters({
-    maxWidth: 600,
+    maxWidth: 1000,
+    width: 800,
     margin: 'auto',
     padding: theme.spacing(3),
     marginTop: theme.spacing(5)

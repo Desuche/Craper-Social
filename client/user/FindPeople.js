@@ -95,17 +95,15 @@ export default function FindPeople() {
         <List>
           {values.users.map((item, i) => {
               return <span key={i}>
+                
                 <ListItem>
+                <Link to={"/user/" + item._id}>
                   <ListItemAvatar className={classes.avatar}>
                       <Avatar src={'/api/users/photo/'+item._id}/>
                   </ListItemAvatar>
-                  <ListItemText primary={item.name}/>
+                  </Link>
+                  <Link to={"/user/" + item._id}><ListItemText primary={item.name}/></Link>
                   <ListItemSecondaryAction className={classes.follow}>
-                    <Link to={"/user/" + item._id}>
-                      <IconButton variant="contained" color="secondary" className={classes.viewButton}>
-                        <ViewIcon/>
-                      </IconButton>
-                    </Link>
                     <Button aria-label="Follow" variant="contained" color="primary" onClick={()=> {clickFollow(item, i)}}>
                       Follow
                     </Button>

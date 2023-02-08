@@ -14,17 +14,18 @@ import {makeStyles} from '@material-ui/core/styles'
 import {create} from './api-post.js'
 import IconButton from '@material-ui/core/IconButton'
 import PhotoCamera from '@material-ui/icons/PhotoCamera'
+import { Box } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: '#efefef',
+    // backgroundColor: '#1d9bf0',
     padding: `${theme.spacing(3)}px 0px 1px`
   },
   card: {
     maxWidth:600,
     margin: 'auto',
     marginBottom: theme.spacing(3),
-    backgroundColor: 'rgba(65, 150, 136, 0.09)',
+    backgroundColor: '#999999',
     boxShadow: 'none'
   },
   cardContent: {
@@ -37,8 +38,8 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 8
   },
   photoButton: {
-    height: 30,
-    marginBottom: 5
+    height: 50,
+    marginBottom: 1
   },
   input: {
     display: 'none',
@@ -46,10 +47,12 @@ const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
-    width: '90%'
+    width: '80%',
+    color: '#ffffff'
   },
   submit: {
-    margin: theme.spacing(2)
+    margin: theme.spacing(2),
+    color: '#ffffff',
   },
   filename:{
     verticalAlign: 'super'
@@ -101,15 +104,14 @@ export default function NewPost (props){
             title={values.user.name}
             className={classes.cardHeader}
           />
-      <CardContent className={classes.cardContent}>
+      <CardContent className={classes.card}>   
         <TextField
             placeholder="Share your thoughts ..."
             multiline
             rows="3"
             value={values.text}
             onChange={handleChange('text')}
-            className={classes.textField}
-            margin="normal"
+            className={classes.textField}       
         />
         <input accept="image/*" onChange={handleChange('photo')} className={classes.input} id="icon-button-file" type="file" />
         <label htmlFor="icon-button-file">
