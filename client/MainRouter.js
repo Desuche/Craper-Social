@@ -24,10 +24,6 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     minHeight: "100vh",
     colour: "#000000"
-    // position: 'absolute', 
-    // left: '50%', 
-    // top: '50%',
-    // transform: 'translate(-50%, -50%)'
   },
   main: {
     display: 'flex',
